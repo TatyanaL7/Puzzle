@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головоломка - мир прокачки разума</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Головоломка - мир прокачки разума</h1>
+            <a href="form.html" class="login-button">Вход</a>
+        </div>
+        <nav>
+            <img src="головоломка.png" alt="Иконка Головоломка" class="nav-icon">
+            <a href="form.html">Регистрация</a>
+            <a href="#games">Головоломки</a>
+            <a href="#about">О платформе</a>
+            <img src="головоломка.png" alt="Иконка Головоломка" class="nav-icon">
+        </nav>
+    </header>
+
+    <div id="about" class="about-section">
+        <div class="about-container">
+            <h2>О платформе</h2>
+            <p>Добро пожаловать в мир увлекательных головоломок! На нашей платформе вы не только сможете прокачать свои навыки стратегического мышления, но и "подружиться" со своими эмоциями. Сайт создан по мотивам мультфильма "Головоломка". Вас ждут любимые герои, интересные факты и увлекательные игры! Развивайся вместе с нами! Чтобы отслеживать свой прогресс, проходи регистрацию на нашей платформе. Хорошей игры!</p>
+        </div>
+    </div>
+
+    <div id="games" class="game-section">
+        <h2>Головоломки</h2>
+        <div class="game-grid">
+            <div class="game-card" style="background: linear-gradient(90deg, #00bff0, #00d8eb); border-color: #00008B; color: #00008B;">
+                <h2>Печаль</h2>
+                <div class="emotion-info">
+                    <img src="печаль.png" alt="Изображение печали" class="emotion-img">
+                </div>
+                <div class="emotion-description">
+                    <h3>Как подружиться с эмоцией?</h3>
+                    <p>Попробуйте поговорить с кем-то о своих чувствах или заняться любимым делом.</p>
+                </div>
+                <div class="game-info">
+                    <img src="бой.jpg" alt="Изображение игры Морской бой">
+                    <h3>Морской бой</h3>
+                    <button onclick="playGame('Морской бой')">Играть</button>
+                </div>
+            </div>
+            <div class="game-card" style="background: linear-gradient(90deg, #ffab01, #fdc700, #fefb41); border-color: #FFD700; color: #FF8C00;">
+                <h2>Радость</h2>
+                <div class="emotion-info">
+                    <img src="радость.png" alt="Изображение радости" class="emotion-img">
+                </div>
+                <div class="emotion-description">
+                    <h3>Как подружиться с эмоцией?</h3>
+                    <p>Делитесь своей радостью с другими и наслаждайтесь моментом.</p>
+                </div>
+                <div class="game-info">
+                    <img src="крестики.png" alt="Изображение игры Крестики-нолики">
+                    <h3>Крестики-нолики</h3>
+                    <button onclick="playGame('Крестики-нолики')">Играть</button>
+                </div>
+            </div>
+            <div class="game-card" style="background: linear-gradient(90deg, #ff0000, #ff6363, #ff6a00); border-color: #FF0000; color: #FF0000;">
+                <h2>Гнев</h2>
+                <div class="emotion-info">
+                    <img src="гнев.png" alt="Изображение гнева" class="emotion-img">
+                </div>
+                <div class="emotion-description">
+                    <h3>Как подружиться с эмоцией?</h3>
+                    <p>Попробуйте глубоко дышать или заняться физической активностью.</p>
+                </div>
+                <div class="game-info">
+                    <img src="спички.jpg" alt="Изображение игры Спички">
+                    <h3>Спички</h3>
+                    <button onclick="playGame('Спички')">Играть</button>
+                </div>
+            </div>
+            <div class="game-card" style="background: linear-gradient(90deg, #d357fe, #be38f3, #7a219e); border-color: #800080; color: #800080;">
+                <h2>Страх</h2>
+                <div class="emotion-info">
+                    <img src="страх.png" alt="Изображение страха" class="emotion-img">
+                </div>
+                <div class="emotion-description">
+                    <h3>Как подружиться с эмоцией?</h3>
+                    <p>Попробуйте визуализировать положительный исход или поговорить с кем-то о своих страхах.</p>
+                </div>
+                <div class="game-info">
+                    <img src="шахматы.png" alt="Изображение игры Шахматы">
+                    <h3>Шахматы</h3>
+                    <button onclick="playGame('Шахматы')">Играть</button>
+                </div>
+            </div>
+            <div class="game-card" style="background: linear-gradient(90deg, #00c982, #6af8bd, #009c82); border-color: #008000; color: #008000;">
+                <h2>Брезгливость</h2>
+                <div class="emotion-info">
+                    <img src="брезгливость.png" alt="Изображение брезгливости" class="emotion-img">
+                </div>
+                <div class="emotion-description">
+                    <h3>Как подружиться с эмоцией?</h3>
+                    <p>Попробуйте сосредоточиться на положительных аспектах ситуации.</p>
+                </div>
+                <div class="game-info">
+                    <img src="судоку.png" alt="Изображение игры Судоку">
+                    <h3>Судоку</h3>
+                    <button onclick="playGame('Судоку')">Играть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Все права защищены</p>
+    </footer>
+
+</body>
+</html>

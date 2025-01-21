@@ -1,0 +1,345 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('фон.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #bc066d; 
+}
+
+header {
+    background: -webkit-linear-gradient(90deg, #ffa602,#ff168d,#8227ff);
+    background: linear-gradient(90deg, #ffa602,#ff168d,#8227ff);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.login-button {
+    background-color: #ff168d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.login-button:hover {
+    background-color: #a85cff;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.about-section, .game-section {
+
+    text-align: center;
+    margin: 10% auto;
+   
+}
+
+.about-container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #000; 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    color: #000; /* Черный цвет текста */
+}
+
+.about-section p {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.game-section h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.game-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+.emotion-description h3{
+    font-size: 2.1em
+}
+.game-card {
+    border: 5px solid;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.game-card h2 {
+    font-size: 2em;
+    margin: 0;
+    grid-column: 1 / 4;
+}
+
+.emotion-info, .emotion-description, .game-info {
+    border: 2px solid #cccccc;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.emotion-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.emotion-description p {
+    margin: 10px 0;
+    font-size: 1.4em;
+}
+
+.game-info img {
+    width: 80%;
+    height: 80%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.game-info button {
+    background-color: #ff168d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.game-info button:hover {
+    background-color: #a85cff;
+}
+
+footer {
+    background: -webkit-linear-gradient(90deg, #f97c15,#fff81f,#fb2dce,#5cd6ff);
+    background: linear-gradient(90deg, #f97c15,#fff81f,#fb2dce,#5cd6ff);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.registration-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registration-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #ff168d; 
+}
+
+.registration-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #ff168d; 
+}
+
+.registration-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.2em;
+}
+
+.registration-container input[type="submit"] {
+    background: #ff168d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.registration-container input[type="submit"]:hover {
+    background: #a85cff;
+}
+
+.registration-container p {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.registration-container a {
+    color: #ff168d;
+    text-decoration: none;
+}
+
+.registration-container a:hover {
+    color: #a85cff;
+}
+
+.avatar-selection {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    overflow-x: auto; /* Добавление горизонтального скролла */
+}
+
+.avatar-selection input[type="radio"] {
+    display: none;
+}
+
+.avatar-selection label {
+    cursor: pointer;
+}
+
+.avatar-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.avatar-selection input[type="radio"]:checked + label img {
+    border: 5px solid #f80f6c; /* Бирюзовый цвет границы */
+    box-shadow: 0 0 10px rgb(255, 58, 239); /* Эффект свечения */
+}
+
+/* Медиа-запросы для адаптивной верстки */
+
+/* Маленькие экраны (смартфоны) */
+@media (max-width: 600px) {
+    .game-card {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .avatar-selection {
+        flex-direction: row;
+        overflow-x: auto; /* Добавление горизонтального скролла */
+    }
+}
+
+/* Средние экраны (планшеты) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .game-card {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+
+    .avatar-selection {
+        flex-direction: row;
+        overflow-x: auto; /* Добавление горизонтального скролла */
+    }
+}
+
+/* Большие экраны (настольные компьютеры) */
+@media (min-width: 1025px) {
+    .game-card {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 70%;
+    }
+
+    .avatar-selection {
+        flex-direction: row;
+        overflow-x: auto; /* Добавление горизонтального скролла */
+    }
+}

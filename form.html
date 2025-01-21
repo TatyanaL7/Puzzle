@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Головоломка - мир прокачки разума</h1>
+        </div>
+        <nav>
+            <img src="головоломка.png" alt="Иконка Головоломка" class="nav-icon">
+            <a href="index.html" aria-label="Вернуться к головоломкам">Вернуться к головоломкам</a>
+            <img src="головоломка.png" alt="Иконка Головоломка" class="nav-icon">
+        </nav>
+    </header>
+
+    <div class="registration-container">
+        <h2>Регистрация</h2>
+        <form>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Почта:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="avatar">Аватарка:</label>
+            <div class="avatar-selection">
+                <input type="radio" id="avatar1" name="avatar" value="а1.jpg" required>
+                <label for="avatar1"><img src="а1.jpg" alt="Печаль" class="avatar-img"></label>
+                <input type="radio" id="avatar2" name="avatar" value="а2.jpg">
+                <label for="avatar2"><img src="а2.jpg" alt="Радость" class="avatar-img"></label>
+                <input type="radio" id="avatar3" name="avatar" value="а3.jpg">
+                <label for="avatar3"><img src="а3.jpg" alt="Гнев" class="avatar-img"></label>
+                <input type="radio" id="avatar4" name="avatar" value="а4.jpg">
+                <label for="avatar4"><img src="а4.jpg" alt="Страх" class="avatar-img"></label>
+                <input type="radio" id="avatar5" name="avatar" value="а5.jpg">
+                <label for="avatar5"><img src="а5.jpg" alt="Брезгливость" class="avatar-img"></label>
+            </div>
+            <input type="submit" value="Зарегистрироваться">
+            <p>Уже зарегистрированы? <a href="form.html">Войти</a></p>
+        </form>
+    </div>
+
+    <footer>
+        <p>Все права защищены</p>
+    </footer>
+</body>
+</html>
