@@ -1,0 +1,258 @@
+/* Общие стили */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #0061fe, #55cdff, #35ffd9);
+    background-size: cover;
+    color: #0b00a0;
+}
+
+header {
+    background: linear-gradient(90deg, #ffa602, #ff168d, #8227ff);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: white;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.game-section {
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 140px;
+}
+
+.game-section h2 {
+    font-size: 2.5em;
+    color: white;
+}
+
+.game-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.game-card {
+    border: 5px solid;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.emotion-info, .emotion-description {
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.emotion-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.emotion-description h3 {
+    font-size: 2em;
+    margin: 0;
+    color: #0b00a0;
+}
+
+.emotion-description p {
+    margin: 10px 0;
+    font-size: 1.4em;
+}
+
+.start-game-button {
+    background-color: #ff168d;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.start-game-button:hover {
+    background-color: #a85cff;
+}
+
+footer {
+    background: linear-gradient(90deg, #f97c15, #fff81f, #fb2dce, #5cd6ff);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Маленькие экраны (мобильные устройства) */
+@media (max-width: 600px) {
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        font-size: 1.2em;
+    }
+
+    .game-section h2 {
+        font-size: 2em;
+    }
+
+    .game-card {
+        flex-direction: column;
+    }
+
+    .emotion-description h3 {
+        font-size: 1.5em;
+    }
+
+    .emotion-description p {
+        font-size: 1.2em;
+    }
+
+    .start-game-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+}
+
+/* Средние экраны (планшеты) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header-content h1 {
+        font-size: 2.2em;
+    }
+
+    nav a {
+        font-size: 1.3em;
+    }
+
+    .game-section h2 {
+        font-size: 2.2em;
+    }
+
+    .game-card {
+        flex-direction: column;
+    }
+
+    .emotion-description h3 {
+        font-size: 1.7em;
+    }
+
+    .emotion-description p {
+        font-size: 1.3em;
+    }
+
+    .start-game-button {
+        padding: 18px 35px;
+        font-size: 1.4em;
+    }
+}
+
+/* Большие экраны (десктопы) */
+@media (min-width: 1025px) {
+    .header-content h1 {
+        font-size: 2.5em;
+    }
+
+    nav a {
+        font-size: 1.4em;
+    }
+
+    .game-section h2 {
+        font-size: 2.5em;
+    }
+
+    .game-card {
+        flex-direction: row;
+    }
+
+    .emotion-description h3 {
+        font-size: 2em;
+    }
+
+    .emotion-description p {
+        font-size: 1.4em;
+    }
+
+    .start-game-button {
+        padding: 20px 40px;
+        font-size: 1.5em;
+    }
+}
