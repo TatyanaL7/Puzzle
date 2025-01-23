@@ -2,15 +2,15 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('фон.jpg') no-repeat center center fixed; 
+    background: url('фон.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #bc066d; 
+    color: #bc066d;
 }
 
 header {
-    background: linear-gradient(90deg, #ffa602,#ff168d,#8227ff);
+    background: linear-gradient(90deg, #ffa602, #ff168d, #8227ff);
     color: white;
-    padding: 1em 0;
+    padding: 0.5em 0; 
     text-align: center;
     position: fixed;
     width: 100%;
@@ -26,7 +26,7 @@ header {
 }
 
 .header-content h1 {
-    font-size: 2.5em;
+    font-size: 1.5em; 
     margin: 0;
 }
 
@@ -34,10 +34,11 @@ header {
     background-color: #ff168d;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
+    padding: 5px 10px; 
+    font-size: 1em;
     cursor: pointer;
     border-radius: 8px;
+    text-decoration: none;
 }
 
 .login-button:hover {
@@ -51,15 +52,16 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    flex-wrap: wrap;
+
 }
 
 nav a {
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 7px 10px; 
     text-decoration: none;
-    font-size: 1.4em;
+    font-size: 1.2em;
+    flex: 1 1 100%; /* Добавлено для равномерного распределения элементов */
 }
 
 nav a:hover {
@@ -68,15 +70,14 @@ nav a:hover {
 }
 
 .nav-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px; 
+    height: 30px;
+    flex: 0 0 auto; /* Добавлено для предотвращения растягивания иконок */
 }
 
 .about-section, .game-section, .video-section {
-
     text-align: center;
     margin: 10% auto;
-   
 }
 
 .about-container, .video-container {
@@ -84,14 +85,18 @@ nav a:hover {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #000; 
+    color: #000;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.about-section h2, .video-section h2 {
+.about-section h2 {
     font-size: 2.5em;
-    color: #000; /* Черный цвет текста */
+    color: #000;
+}
+.video-section h2 {
+    font-size: 2.5em;
+    color: #ffffff;
 }
 
 .about-section p {
@@ -112,9 +117,11 @@ nav a:hover {
     width: 90%;
     margin: 0 auto;
 }
-.emotion-description h3{
-    font-size: 2.1em
+
+.emotion-description h3 {
+    font-size: 2.1em;
 }
+
 .game-card {
     border: 5px solid;
     padding: 20px;
@@ -153,23 +160,17 @@ nav a:hover {
     text-align: center;
 }
 
-.emotion-img {
-    width: 100%;
+.emotion-img, .game-info img {
+    max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .emotion-description p {
     margin: 10px 0;
     font-size: 1.4em;
-}
-
-.game-info img {
-    width: 80%;
-    height: 80%;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .game-info h3 {
@@ -193,11 +194,10 @@ nav a:hover {
 }
 
 footer {
-    background: -webkit-linear-gradient(90deg, #f97c15,#fff81f,#fb2dce,#5cd6ff);
-    background: linear-gradient(90deg, #f97c15,#fff81f,#fb2dce,#5cd6ff);
+    background: linear-gradient(90deg, #f97c15, #fff81f, #fb2dce, #5cd6ff);
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0; 
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -225,14 +225,14 @@ footer p {
 .registration-container h2 {
     margin-bottom: 20px;
     font-size: 2em;
-    color: #ff168d; 
+    color: #ff168d;
 }
 
 .registration-container label {
     display: block;
     margin-bottom: 5px;
     font-size: 1.2em;
-    color: #ff168d; 
+    color: #ff168d;
 }
 
 .registration-container input {
@@ -275,11 +275,11 @@ footer p {
 
 .avatar-selection {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
     justify-content: center;
-    overflow-x: auto; /* Добавление горизонтального скролла */
+    overflow-x: auto;
 }
 
 .avatar-selection input[type="radio"] {
@@ -299,11 +299,9 @@ footer p {
 }
 
 .avatar-selection input[type="radio"]:checked + label img {
-    border: 5px solid #f80f6c; /* Бирюзовый цвет границы */
-    box-shadow: 0 0 10px rgb(255, 58, 239); /* Эффект свечения */
+    border: 5px solid #f80f6c;
+    box-shadow: 0 0 10px rgb(255, 58, 239);
 }
-
-/* Медиа-запросы для адаптивной верстки */
 
 
 /* Маленькие экраны (смартфоны) */
@@ -316,10 +314,11 @@ footer p {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        width:auto;
+        width: auto;
     }
+
     .about-section {
-        padding-top: 120% auto;
+        margin: 53% auto;
     }
 
     .avatar-selection {
@@ -327,20 +326,20 @@ footer p {
         overflow-x: auto;
     }
     nav {
-        
-        flex-wrap: wrap; /* Добавлено для переноса элементов на новую строку */
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        flex-wrap: wrap; 
     }
     
-    nav a {
-        flex: 1 1 100%; /* Добавлено для равномерного распределения элементов */
+
+    .registration-container {
+        width: 90%;
+        padding: 10px;
     }
-    
-    .nav-icon {
-        width: 40px;
-        height: 40px;
-        flex: 0 0 auto; /* Добавлено для предотвращения растягивания иконок */
-    }
-        
 }
 
 /* Средние экраны (планшеты) */
@@ -352,6 +351,7 @@ footer p {
     .game-card {
         width: 100%;
     }
+
     .about-section {
         margin: 20% auto;
     }
@@ -360,9 +360,36 @@ footer p {
         flex-direction: row;
         overflow-x: auto;
     }
+
+    .registration-container {
+        width: 70%;
+        padding: 15px;
+    }
+
+    .emotion-description {
+        flex: 1;
+        font-size: 1.2em; 
+    }
+
+    .emotion-description h3 {
+        font-size: 1.5em; 
+    }
+
+    .emotion-description p {
+        font-size: 1em; 
+    }
+
+    .emotion-info, .game-info {
+        flex: 0 0 30%; 
+    }
+
+    .emotion-img, .game-info img {
+        max-width: 80%; 
+    }
 }
 
-/* Большие экраны (настольные компьютеры) */
+
+/* Большие экраны (компьютеры) */
 @media (min-width: 1025px) {
     .game-card {
         grid-template-columns: 1fr 1fr 1fr;
@@ -371,6 +398,11 @@ footer p {
 
     .avatar-selection {
         flex-direction: row;
-        overflow-x: auto; /* Добавление горизонтального скролла */
+        overflow-x: auto;
+    }
+
+    .registration-container {
+        width: 50%;
+        padding: 20px;
     }
 }
