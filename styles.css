@@ -8,7 +8,6 @@ body {
 }
 
 header {
-    background: -webkit-linear-gradient(90deg, #ffa602,#ff168d,#8227ff);
     background: linear-gradient(90deg, #ffa602,#ff168d,#8227ff);
     color: white;
     padding: 1em 0;
@@ -52,6 +51,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -72,14 +72,14 @@ nav a:hover {
     height: 40px;
 }
 
-.about-section, .game-section {
+.about-section, .game-section, .video-section {
 
     text-align: center;
     margin: 10% auto;
    
 }
 
-.about-container {
+.about-container, .video-container {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     padding: 20px;
@@ -89,7 +89,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.about-section h2 {
+.about-section h2, .video-section h2 {
     font-size: 2.5em;
     color: #000; /* Черный цвет текста */
 }
@@ -305,29 +305,60 @@ footer p {
 
 /* Медиа-запросы для адаптивной верстки */
 
+
 /* Маленькие экраны (смартфоны) */
 @media (max-width: 600px) {
+    .game-grid {
+        flex-direction: column;
+    }
+
     .game-card {
-        grid-template-columns: 1fr;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width:auto;
+    }
+    .about-section {
+        padding-top: 120% auto;
     }
 
     .avatar-selection {
         flex-direction: row;
-        overflow-x: auto; /* Добавление горизонтального скролла */
+        overflow-x: auto;
     }
+    nav {
+        
+        flex-wrap: wrap; /* Добавлено для переноса элементов на новую строку */
+    }
+    
+    nav a {
+        flex: 1 1 100%; /* Добавлено для равномерного распределения элементов */
+    }
+    
+    .nav-icon {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto; /* Добавлено для предотвращения растягивания иконок */
+    }
+        
 }
 
 /* Средние экраны (планшеты) */
 @media (min-width: 601px) and (max-width: 1024px) {
+    .game-grid {
+        flex-direction: column;
+    }
+
     .game-card {
-        grid-template-columns: 1fr;
-        width: 80%;
+        width: 100%;
+    }
+    .about-section {
+        margin: 20% auto;
     }
 
     .avatar-selection {
         flex-direction: row;
-        overflow-x: auto; /* Добавление горизонтального скролла */
+        overflow-x: auto;
     }
 }
 
